@@ -13,7 +13,7 @@
 
 
 <details>
-  <summary><b> Spēles procesa Screenshots</b></summary>
+  <summary><b>Screenshots</b></summary>
   <br>
   <p align="center">
     <img src="https://путь_к_твоей_картинке_1.png" alt="Gameplay 1" width="600">
