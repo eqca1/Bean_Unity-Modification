@@ -29,7 +29,7 @@
     <br>
   </p>
 </details>
-
+      <hr>
 
 > [!NOTE]
 > Programmas jaunāko versiju var lejupielādēt sadaļā **Releases**.
