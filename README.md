@@ -1,11 +1,11 @@
 # Bean Unity Modification
 
 > [!IMPORTANT]
-> Projekta funkcionalitāte (Donut Game):
+> Projekta funkcionalitāte:
 
 - [x] Dinamiska virtuļu un bīstamo objektu ģenerēšana
 - [x] Daudzpakāpju punktu sistēma
-- [x] Vizuālais (Healthbar) ar mainīgiem stāvokļiem
+- [x] Vizuālais Healthbar ar mainīgiem stāvokļiem
 - [x] Spēles laika uzskaite
 - [x] Progresa un veselības pilnīga atiestatīšana pie atkārtotas ieslēgšanas
 - [x] Audio efekti objektu saņemšanai un bojājumu gūšanai
@@ -34,7 +34,7 @@
       <hr>
 
 > [!NOTE]
-> Programmas jaunāko versiju var lejupielādēt sadaļā **Releases**.
+> Programmas jaunāko versiju var lejupielādēt sadaļā [**Releases**](https://github.com/eqca1/Bean_Unity-Modification/releases).
 
 > [!CAUTION]
 > :octocat:
