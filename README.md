@@ -20,7 +20,7 @@
       <img width="979" height="459" alt="Gameplay" src="https://github.com/user-attachments/assets/75ec2a33-0bd5-4204-8b65-926aabcac189" />
     <br>
   </p>
-  
+      <hr>
   <p align="center">
         <i>Healthbar</i>
       <img width="170" height="62" alt="Healthbar" src="https://github.com/user-attachments/assets/1ef467a3-032f-427c-8a5f-079c0363f07e" />
