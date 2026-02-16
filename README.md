@@ -10,7 +10,7 @@
 - [x] Progresa un veselības pilnīga atiestatīšana pie atkārtotas ieslēgšanas
 - [x] Audio efekti objektu saņemšanai un bojājumu gūšanai
 - [x] Fizikas un sadursmju apstrāde starp tēlu un objektiem
-
+      <hr>
 
 <details>
   <summary><b>Screenshots</b></summary>
