@@ -15,7 +15,7 @@ public class DonutDestroyScript : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Donut") || collision.CompareTag("DonutPurple") ||
+        if (collision.CompareTag("Donut") || collision.CompareTag("DonutPurple") || collision.CompareTag("Hazard") ||
             collision.CompareTag("DonutPink") || collision.CompareTag("GoldenDonut"))
         {
             Destroy(collision.gameObject);

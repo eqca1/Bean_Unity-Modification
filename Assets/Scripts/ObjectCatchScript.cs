@@ -1,86 +1,85 @@
 ﻿using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 public class ObjectCatchScript : MonoBehaviour
 {
-    [Header("UI References")]
     public TMP_Text scoreText;
-    public TMP_Text livesText;
-
-    [Header("Game Settings")]
-    public int score = 0;
-    public int lives = 3;
-
-    [Header("References")]
-    private SFX_Script sfx;
+    public Image healthBarImage;
+    public Sprite[] healthSprites;
     public GameTimer gameTimer;
+
+
+    public int score = 0;
+    public int lives = 4;
+
+    private SFX_Script sfx;
 
     void Start()
     {
         sfx = FindFirstObjectByType<SFX_Script>();
-        UpdateUI();
+        ResetPlayerStats();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.transform.IsChildOf(transform))
-            return;
-
-        if (collision.CompareTag("DonutPurple")) 
-        {
-            AddScore(1);
-            Destroy(collision.gameObject);
-        }
-        else if (collision.CompareTag("DonutPink")) 
-        {
-            AddScore(2);
-            Destroy(collision.gameObject);
-        }
-        else if (collision.CompareTag("GoldenDonut")) 
-        {
-            AddScore(10);
-            Destroy(collision.gameObject);
-        }
-        else if (collision.CompareTag("Hazard")) 
+        if (collision.CompareTag("Hazard"))
         {
             TakeDamage();
             Destroy(collision.gameObject);
         }
+        else if (collision.CompareTag("DonutPurple")) { AddScore(1); Destroy(collision.gameObject); }
+        else if (collision.CompareTag("DonutPink")) { AddScore(2); Destroy(collision.gameObject); }
+        else if (collision.CompareTag("GoldenDonut")) { AddScore(10); Destroy(collision.gameObject); }
     }
 
     void AddScore(int amount)
     {
         score += amount;
-        sfx.PlaySFX(4);
-        UpdateUI();
+        UpdateScoreUI(); 
+        if (sfx != null) sfx.PlaySFX(4);
     }
 
     void TakeDamage()
     {
-        lives--;
-        sfx.PlaySFX(3);
-        UpdateUI();
-        if (lives <= 0) GameOver();
+        if (lives > 0)
+        {
+            lives--;
+            UpdateHealthUI();
+            if (sfx != null) sfx.PlaySFX(3);
+            if (lives <= 0)
+            {
+                Time.timeScale = 0;
+                if (gameTimer != null) gameTimer.StopTimer();
+            }
+        }
     }
 
+    void UpdateHealthUI()
+    {
+        if (healthBarImage != null && healthSprites.Length > lives)
+            healthBarImage.sprite = healthSprites[lives];
+    }
     public void ResetPlayerStats()
     {
-        score = 0;
-        lives = 3;
-        UpdateUI();
-        Time.timeScale = 1; 
+        this.score = 0;
+
+        this.lives = healthSprites.Length - 1;
+
+        if (scoreText != null)
+        {
+            scoreText.text = "Score: 0";
+        }
+        UpdateHealthUI();
+
+        Time.timeScale = 1;
     }
 
-    void UpdateUI()
+    void UpdateScoreUI()
     {
-        if (scoreText != null) scoreText.text = "Score: " + score;
-        if (livesText != null) livesText.text = "Lives: " + lives;
-    }
-
-    void GameOver()
-    {
-        Debug.Log("Game Over!");
-        if (gameTimer != null) gameTimer.StopTimer();
-        Time.timeScale = 0;
+        if (scoreText != null)
+        {
+            scoreText.text = "Score: " + score;
+        }
     }
 }

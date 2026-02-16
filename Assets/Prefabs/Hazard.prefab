@@ -15,8 +15,8 @@ GameObject:
   - component: {fileID: 2486919449594821082}
   - component: {fileID: 7774980522056065579}
   m_Layer: 5
-  m_Name: PinkDonut
-  m_TagString: DonutPink
+  m_Name: Hazard
+  m_TagString: Hazard
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -68,7 +68,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 8470712227180179920, guid: 7268d83b8c6a36743af62a3a0c59d4ec, type: 3}
+  m_Sprite: {fileID: -6549261018540208071, guid: 6e3db96b586066848acc9b5d8b627cce, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
