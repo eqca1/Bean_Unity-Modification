@@ -16,15 +16,15 @@
   <summary><b>Screenshots</b></summary>
   <br>
   <p align="center">
-    <img src="https://путь_к_твоей_картинке_1.png" alt="Gameplay 1" width="600">
+        <i>Gameplay</i>
+    <img src="file:///C:/Users/mafik/Downloads/Screenshot%202026-02-16%20215755.png" alt="Gameplay" width="600">
     <br>
-    <i>Spēles galvenais process</i>
   </p>
   
   <p align="center">
-    <img src="https://путь_к_твоей_картинке_2.png" alt="Gameplay 2" width="600">
+        <i>Healthbar</i>
+    <img src="file:///C:/Users/mafik/Downloads/Screenshot%202026-02-16%20215812.png" alt="Healthbar" width="600">
     <br>
-    <i>Healthbar</i>
   </p>
 </details>
 
