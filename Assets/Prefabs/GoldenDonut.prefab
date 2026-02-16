@@ -15,8 +15,8 @@ GameObject:
   - component: {fileID: 2486919449594821082}
   - component: {fileID: 7774980522056065579}
   m_Layer: 5
-  m_Name: PurpleDonut
-  m_TagString: PurpleDonut
+  m_Name: GoldenDonut
+  m_TagString: GoldenDonut
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -68,7 +68,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -4013059312791865090, guid: 805139426646a4749b82cdf5cc3ae521, type: 3}
+  m_Sprite: {fileID: 7276501197805997696, guid: b7ca23bb64ba2f641ba6d707870a8a77, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

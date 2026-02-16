@@ -1,4 +1,4 @@
-using TMPro;
+﻿using TMPro;
 using UnityEngine;
 
 public class DonutDestroyScript : MonoBehaviour
@@ -15,7 +15,8 @@ public class DonutDestroyScript : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Donut"))
+        if (collision.CompareTag("Donut") || collision.CompareTag("DonutPurple") ||
+            collision.CompareTag("DonutPink") || collision.CompareTag("GoldenDonut"))
         {
             Destroy(collision.gameObject);
             destroyedDonuts++;

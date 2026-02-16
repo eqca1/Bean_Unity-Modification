@@ -5,6 +5,10 @@ TagManager:
   serializedVersion: 3
   tags:
   - Donut
+  - GoldenDonut
+  - DonutPurple
+  - DonutPink
+  - Hazard
   layers:
   - Default
   - TransparentFX

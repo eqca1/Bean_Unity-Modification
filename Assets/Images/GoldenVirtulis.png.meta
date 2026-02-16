@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 6e3db96b586066848acc9b5d8b627cce
+guid: b7ca23bb64ba2f641ba6d707870a8a77
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6549261018540208071
-    second: AsteroidSprite_0
+      213: 7276501197805997696
+    second: GoldenVirtulis_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -126,13 +126,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: AsteroidSprite_0
+      name: GoldenVirtulis_0
       rect:
         serializedVersion: 2
-        x: 11
-        y: 6
-        width: 237
-        height: 246
+        x: 4
+        y: 8
+        width: 1015
+        height: 1013
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 93019989dc95c15a0800000000000000
-      internalID: -6549261018540208071
+      spriteID: 08e4eee69435bf460800000000000000
+      internalID: 7276501197805997696
       vertices: []
       indices: 
       edges: []
@@ -160,8 +160,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      AsteroidSprite_0: -6549261018540208071
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

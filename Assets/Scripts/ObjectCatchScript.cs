@@ -1,32 +1,86 @@
-using UnityEngine;
+﻿using UnityEngine;
+using TMPro;
 
 public class ObjectCatchScript : MonoBehaviour
 {
-    public float sizeIncrease = 0.5f;
-    public float massIncrease = 1f;
-    private Rigidbody2D rb;
-    SFX_Script sfx;
+    [Header("UI References")]
+    public TMP_Text scoreText;
+    public TMP_Text livesText;
 
+    [Header("Game Settings")]
+    public int score = 0;
+    public int lives = 3;
+
+    [Header("References")]
+    private SFX_Script sfx;
+    public GameTimer gameTimer;
 
     void Start()
     {
         sfx = FindFirstObjectByType<SFX_Script>();
-        rb = GetComponent<Rigidbody2D>();
+        UpdateUI();
     }
 
-    
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.transform.IsChildOf(transform))
             return;
-        
-        if(collision.CompareTag("Donut")) {
-            sfx.PlaySFX(4);
+
+        if (collision.CompareTag("DonutPurple")) 
+        {
+            AddScore(1);
             Destroy(collision.gameObject);
-            transform.localScale += new Vector3(sizeIncrease, sizeIncrease, 0);
-            rb.mass += massIncrease;
-        
-        } else
-            Debug.Log("Collided with non-donut object: " + collision.gameObject.name);
+        }
+        else if (collision.CompareTag("DonutPink")) 
+        {
+            AddScore(2);
+            Destroy(collision.gameObject);
+        }
+        else if (collision.CompareTag("GoldenDonut")) 
+        {
+            AddScore(10);
+            Destroy(collision.gameObject);
+        }
+        else if (collision.CompareTag("Hazard")) 
+        {
+            TakeDamage();
+            Destroy(collision.gameObject);
+        }
+    }
+
+    void AddScore(int amount)
+    {
+        score += amount;
+        sfx.PlaySFX(4);
+        UpdateUI();
+    }
+
+    void TakeDamage()
+    {
+        lives--;
+        sfx.PlaySFX(3);
+        UpdateUI();
+        if (lives <= 0) GameOver();
+    }
+
+    public void ResetPlayerStats()
+    {
+        score = 0;
+        lives = 3;
+        UpdateUI();
+        Time.timeScale = 1; 
+    }
+
+    void UpdateUI()
+    {
+        if (scoreText != null) scoreText.text = "Score: " + score;
+        if (livesText != null) livesText.text = "Lives: " + lives;
+    }
+
+    void GameOver()
+    {
+        Debug.Log("Game Over!");
+        if (gameTimer != null) gameTimer.StopTimer();
+        Time.timeScale = 0;
     }
 }
