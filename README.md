@@ -17,13 +17,13 @@
   <br>
   <p align="center">
         <i>Gameplay</i>
-    <img src="file:///C:/Users/mafik/Downloads/Screenshot%202026-02-16%20215755.png" alt="Gameplay" width="600">
+      <img width="979" height="459" alt="Gameplay" src="https://github.com/user-attachments/assets/75ec2a33-0bd5-4204-8b65-926aabcac189" />
     <br>
   </p>
   
   <p align="center">
         <i>Healthbar</i>
-    <img src="file:///C:/Users/mafik/Downloads/Screenshot%202026-02-16%20215812.png" alt="Healthbar" width="600">
+      <img width="170" height="62" alt="Healthbar" src="https://github.com/user-attachments/assets/1ef467a3-032f-427c-8a5f-079c0363f07e" />
     <br>
   </p>
 </details>
@@ -34,4 +34,5 @@
 
 > [!CAUTION]
 > :octocat:
+
 
